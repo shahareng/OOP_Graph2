@@ -1,18 +1,33 @@
 package gameClient;
 
-import oop_utils.OOP_Point3D;
+import utils.Point3D;
 
 public class Fruit
 {
 	private double value;
 	private int type;
-	private OOP_Point3D pos;
+	private Point3D pos;
 
-	public Fruit(double value, int type, OOP_Point3D pos)
+	public Fruit(double value, int type, Point3D pos)
 	{
 		this.value=value;
 		this.type=type;
 		this.pos=pos;
+	}
+	
+	public double getValue()
+	{
+		return this.value;
+	}
+	
+	public int getType()
+	{
+		return this.type;
+	}
+	
+	public Point3D getPos()
+	{
+		return this.pos;
 	}
 }
 

@@ -35,12 +35,31 @@ public class SimpleGameClient {
 	public static void test1() {
 		int scenario_num = 2;
 		game_service game = Game_Server.getServer(scenario_num); // you have [0,23] games
+		// String str = game.toString();
+		//syso(str);
+		/*
+		 * for(String fruit : game.getFruits())
+		 * {
+		 * syso(fruit);
+		 */
+		//String g = game.getGraph();
+		//syso(g);
+		// game.addRobot(numOfNode);
+		/*
+		 * while(game.isRunning())
+		 * {
+		 * game.chooseNextEdge(robot_id, node_dest_id);
+		 * game.move();
+		 * syso(game.timeToEnd()/1000);
+		 * }
+		 */
 		String g = game.getGraph();
 		OOP_DGraph gg = new OOP_DGraph();
 		gg.init(g);
 		String info = game.toString();
 		JSONObject line;
 		try {
+			// read from json file
 			line = new JSONObject(info);
 			JSONObject ttt = line.getJSONObject("GameServer");
 			int rs = ttt.getInt("robots");
